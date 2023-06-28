@@ -1,0 +1,158 @@
+body{
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+#c-lidi_dny > input{
+    width: 3%;
+    text-align: center;
+    margin: 1px;
+}
+#center{
+    margin: auto;
+    width: 76%;
+    /*margin: 0px auto;*/
+
+}
+.jidlo{
+    width: 22.5%;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    /*float:left;*/
+    /*display: inline-block;*/
+    margin: 0.5%;
+    padding: 0.5%;
+}
+#c-jidla{
+      display: flex;
+      flex-wrap: wrap;
+}
+
+#c-dny_vypis{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#c-seznamy_po_dnech{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#c-nakupni_seznam{
+    width: 20cm;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    margin: 0.5%;
+    padding: 0.5%;
+}
+#c-seznam{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 30cm;
+}
+
+#c-seznam > p{
+    margin: 10px;
+    width: 22.5%;
+    
+}
+.c-den_vypis{
+    width: 22.5%;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    margin: 0.5%;
+    padding: 0.5%;
+}
+
+.c-jidelnicek_vypis{
+    width: 22.5%;
+    height: 16.675cm;
+    /*border: 1px solid #bbb;*/
+    border-radius: 5px;
+    margin: 0.5%;
+    padding: 0.5%;
+}
+
+.jidlo-text{
+    font-size: 17px;
+}
+
+
+hr{
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+select{
+    width: 100%; 
+}
+
+.c-den_vypis > tr > td{
+    padding: 2px 5px 2px 0px;
+}
+
+.jidelnicek{
+    width: 21cm;
+    height: 34cm;
+}
+.jidelnicek > p > h2, h3{
+	display: inline;
+}
+
+.scroll-table{
+    overflow-x: auto;
+    text-align: center;
+}
+.scroll-table td, th{
+    border-right: 1px solid  #333;
+    padding: 0px 5px 0px 5px;
+    
+}
+
+.scroll-table th{
+    border-bottom: 1px solid  #333;
+}
+
+html { scroll-behavior: smooth; } 
+
+
+ /* The navigation bar */
+ .navbar {
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 10%;
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+    /*float: left;*/
+    display: block;
+    color: #333;
+    text-align: left;
+    padding: 4px 5px;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+  }
+  
+  /* Change background on mouse-over */
+  .navbar a:hover {
+    background: #ddd;
+    color: black;
+  }
+
+  #control-buttons{
+    margin: 50px 0px 0px 0px;
+  }
+
+  #data-entery{
+    margin: 50px 0px 0px 0px;
+  }
+
+  #page-navigation{
+    margin: 0px 0px 0px 0px;
+  }
+
+
+

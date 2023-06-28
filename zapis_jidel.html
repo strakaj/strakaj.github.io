@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .surovina{
+                padding: 10px;
+                width: 45%;
+            }
+            .surovina_new{
+                background-color: hotpink;
+            }
+            #suroviny-vse {
+                display: flex; 
+                flex-wrap: wrap;
+            }
+            #center {
+                display: flex;
+            }
+
+            #suroviny-nove{
+                flex: 25%;
+            }
+            #suroviny-vse {
+                flex: 75%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="center">
+            <div id="suroviny-nove">
+                <button><a href="jidelnicek.html"><--</a></button> 
+                <table>
+                    <tr> 
+                        <td><label>Nazev: </label></td> <td><input type="text" id="nazev"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Typ: </label></td> 
+                        <td>
+                            <select id="typ">
+                                <option value="snídaně">snídaně</option>
+                                <option value="svačina">svačina</option>
+                                <option value="oběd">oběd</option> 
+                                <option value="večeře">večeře</option> 
+                            </select>
+                            
+                        </td>
+                    </tr>
+
+                    <tr> 
+                        <td><label>Suroviny: </label></td> <td><input type="text" id="surovina"></td>
+                    </tr>
+                    <tr> 
+                        <td><label>Množství: </label></td> <td><input type="text" id="mn"></td>
+                    </tr>
+                    <tr> 
+                        <td><label>Jednotky: </label></td> <td><input type="text" id="jed"></td>
+                    </tr>
+                    <tr> 
+                        <td><label>Na osobu: </label></td> <td><input type="text" id="no"></td>
+                    </tr>
+                    <tr> 
+                        <td><label>Návod: </label></td> <td><textarea  id="navod"></textarea></td>
+                    </tr>
+
+                   <tr> 
+                       <td><input type="button" id="ulozit_surovinu" value="Zapsat"></td>
+                   </tr>
+                    
+                </table>
+                <br>
+                <hr>
+                <input type="button" id="ulozit_data" value="Uložit">
+            </div>
+
+            <div id="suroviny-vse">
+            </div>
+
+            
+        </div>
+
+        <script type="text/javascript" src="data/recepty_json.js"></script>
+        <script type="text/javascript" src="scripts/zapis_jidel.js"></script>
+    </body>
+</html>

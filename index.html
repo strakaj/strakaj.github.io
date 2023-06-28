@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="navbar" id="menu">
+            
+            <div id="page-navigation">
+                <a href="#c-dny">Počty dnů</a>
+                <a href="#c-jidla">Jídla v databázi</a>
+                <a href="#c-dny_vypis">Výběr jídel</a>
+                <a href="#c-nakupni_seznam">Nákupní seznam</a>
+                <a href="#c-seznamy_po_dnech">Nákupní seznam po dnech</a>
+                <a href="#c-jidelnicky_po_dnech">Jídelníčky po dnech</a>
+            </div>
+
+            <div id="data-entery">
+                <h3>Zadávání:</h3>
+                <a href="zapis_suroviny.html">Zadání surovin</a>
+                <a href="zapis_jidel.html">Zadání jídel</a>
+            </div>
+
+            <div id="control-buttons">
+                <hr>
+                <label>Uložit jídelníček</label><br>
+                <input type="button" id="ulozit_jidelnicek" value="ULOŽIT">
+                <hr>
+                <form id="upload">
+                    <label for="file">Načíst soubor</label><br>
+                    <input type="file" id="file" accept=".json">
+                    <br><br>
+                    <button>Načíst</button>
+                </form>
+                <br>
+            </div>
+
+        </div>
+        
+        
+		<div id="center">
+
+            <div id="no_print">
+
+                <div id="c-dny">
+                    <label for="days">Počet dnů</label>
+                    <input type="input" id="days" value="7-30, 14-70">
+                    <button id="button-days">odeslat</button>
+                    <div id="display-days"></div>
+                </div>
+                <br><hr>
+
+                <!--div id="c-lidi_dny"></div>
+                <br><hr-->
+
+                <div id="c-jidla">
+                    <div id="c-breakfast" class="jidlo"><h3>Snídaně</h3><hr></div>
+                    <div id="c-snack" class="jidlo"><h3>Svačiny</h3><hr></div>
+                    <div id="c-lunch" class="jidlo"><h3>Obědy</h3><hr></div>
+                    <div id="c-dinner" class="jidlo"><h3>Večeře</h3><hr></div>
+                </div>
+                <br><hr>
+
+                <div id="c-dny_vypis"></div>
+                
+
+                <br><hr>
+
+            </div>
+
+            
+
+            <div id="c-nakupni_seznam" class='jidelnicek'>
+                <h2>Nakupni seznam</h2>
+                <hr>
+                <div id="c-seznam">
+                </div>
+            </div>
+            <br>
+
+            <div id="c-seznamy_po_dnech">
+            </div>
+            <br><hr>
+
+            <div id="c-jidelnicky_po_dnech">
+            </div>
+            <br><hr>
+            <script type="text/javascript" src="data/recepty_json.js"></script>
+            <script type="text/javascript" src="data/suroviny_json.js"></script>
+            <script type="text/javascript" src="data/jidelnicek_2022.js"></script>
+
+            <script type="text/javascript" src="scripts/utils.js"></script>
+            <script type="text/javascript" src="scripts/sections/number_of_people_selection.js"></script>
+            <script type="text/javascript" src="scripts/sections/meals_list.js"></script>
+            <script type="text/javascript" src="scripts/sections/meals_selection.js"></script>
+            <script type="text/javascript" src="scripts/sections/shopping_lists.js"></script>
+            <script type="text/javascript" src="scripts/sections/menu_days.js"></script>
+
+            <script type="text/javascript" src="main.js"></script>
+            
+        </div>
+    </body>
+</html>

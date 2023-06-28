@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .surovina{
+                padding: 10px;
+            }
+            .surovina_new{
+                background-color: hotpink;
+            }
+            #suroviny-vse {
+                display: flex; 
+                flex-wrap: wrap;
+            }
+            #center {
+                display: flex;
+            }
+
+            #suroviny-nove{
+                flex: 25%;
+				overflow: hidden;
+				position: fixed; /* Set the navbar to fixed position */
+				top: 0; /* Position the navbar at the top of the page */
+				left: 10px;
+				
+            }
+            #suroviny-vse {
+                flex: 75%;
+				
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div id="center">
+            <div id="suroviny-nove">
+                <button><a href="jidelnicek.html"><--</a></button>
+                <table>
+                    <tr> 
+                        <td><label>Název: </label></td> <td><input type="text" id="nazev_surovina"></td>
+                    </tr>
+                    <tr> 
+                        <td><label>Předem: </label></td> <td><input type="checkbox" id="predem_surovina"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Jednotky: </label></td> 
+                        <td>
+                            <select id="jednotky_surovina">
+                                <option value="g">g</option>
+                                <option value="ks">ks</option>
+                                <option value="ml">ml</option> 
+                            </select>
+                            
+                        </td>
+                   </tr>
+                   <tr> 
+                        <td><label>Cena: </label></td> <td><input type="text" id="cena_surovina"></td>
+                   </tr>
+                   <tr> 
+                       <td><input type="button" id="ulozit_surovinu" value="Zapsat"></td>
+                   </tr>
+                    
+                </table>
+                <br>
+                <hr>
+                <input type="button" id="ulozit_data" value="Uložit">
+
+                <br><hr>
+                <div id="chybejici"></div>
+            </div>
+
+            <div id="suroviny-vse">
+            </div>
+
+            
+        </div>
+
+        <script type="text/javascript" src="data/suroviny_json.js"></script>
+        <script type="text/javascript" src="data/recepty_json.js"></script>
+        <script type="text/javascript" src="scripts/zapis_suroviny.js"></script>
+    </body>
+</html>
