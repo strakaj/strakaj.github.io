@@ -930,4 +930,11 @@ var components_data = [
       "jednotky":"ks",
       "cena":70
    },
+   {
+      "id":144,
+      "nazev":"nutella",
+      "predem":1,
+      "jednotky":"ks",
+      "cena":160
+   },
 ]

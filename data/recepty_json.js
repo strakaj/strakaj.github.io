@@ -2416,5 +2416,58 @@ var recipes = [
                        0
                     ],
                     "navod":""
+				 },
+                 {
+                    "id":71,
+                    "nazev":"mrkev s brambory",
+                    "typ":"oběd",
+                    "suroviny":[
+                       "brambory",
+                       "slanina",
+                       "cibule",
+                       "mrkev (g)"
+                    ],
+                    "mnozstvi":[
+                       225,
+                       62.5,
+                       30,
+                       200
+                    ],
+                    "jednotky":[
+                       "g",
+                       "g",
+                       "g",
+                       "g"
+
+                    ],
+                    "na_osobu":[
+                       1,
+                       1,
+                       1,
+                       1
+                    ],
+                    "navod":""
+                 },
+                 {
+                    "id":72,
+                    "nazev":"rohlík s nutellou",
+                    "typ":"snídaně",
+                    "suroviny":[
+                       "rohlík",
+                       "nutella",
+                    ],
+                    "mnozstvi":[
+                       2.5,
+                       3
+                    ],
+                    "jednotky":[
+                       "ks",
+                       "ks"
+                    ],
+                    "na_osobu":[
+                       1,
+                       0
+                    ],
+                    "navod":""
                  }
               ]

@@ -90,6 +90,7 @@ function load_meals(){
 
 function initialize_menu(last_year, recipes_from_file){
 	k = 0
+	var previous_menu = jidelnicek_2023
 	//console.log(jidelnicek_2022)
 	for (const meal_name of Object.keys(state["menu"])) {
 		if(last_year == false){
@@ -100,7 +101,7 @@ function initialize_menu(last_year, recipes_from_file){
 		}
 		else{
 		    if(recipes_from_file == true){
-		        state["menu"][meal_name] = jidelnicek_2022[k]
+		        state["menu"][meal_name] = previous_menu[k]
             	k++;
 
 		    }
@@ -110,9 +111,9 @@ function initialize_menu(last_year, recipes_from_file){
 		        for(let i = 0; i < state.number_of_days; i++){ //jidelnicek_2022[k].length
 
 		            mn = meal_name.split("_")[0]
-		            if (n < jidelnicek_2022[k].length) {
+		            if (n < previous_menu[k].length) {
 		                for(let j = 0; j < meals[mn].length; j++){
-                            if(jidelnicek_2022[k][i]["id"] == meals[mn][j]["id"]){
+                            if(previous_menu[k][i]["id"] == meals[mn][j]["id"]){
                                 new_meals.push(meals[mn][j]);
                                 n++;
                             }
@@ -183,6 +184,12 @@ var button_ndays = document.getElementById("button-days");
 button_ndays.addEventListener("click", get_ndays);
 
 
+state.number_of_days = 21
+state.people_per_day = [40, 41, 40, 40, 38, 38, 43, 79, 78, 70, 69, 62, 69, 70, 77, 69, 66, 66, 66, 64, 64]
+
+set_state(1)
+
+
 // load menu from file
 let form = document.querySelector('#upload');
 let file = document.querySelector('#file');
@@ -203,9 +210,17 @@ function handleSubmit (event) {
 function logFile (event) {
 	let str = event.target.result;
 	let json = JSON.parse(str);
-
+	console.log("json", json)
 	state = json;
-	set_state(state["stage"]);
+	console.log(state)
+	//set_state(state["stage"]);
+	
+	number_of_people_visualization();
+	meal_selects_visualization();
+	shopping_lists_visualization();
+	menu_visualization();
+		
+	console.log(state)
 }
 
 // save menu to the file
@@ -220,7 +235,7 @@ const downloadToFile = (content, filename, contentType) => {
       URL.revokeObjectURL(a.href);
   };
 
-  document.querySelector('#ulozit_jidelnicek').addEventListener('click', () => {
+document.querySelector('#ulozit_jidelnicek').addEventListener('click', () => {
     const save_data = JSON.stringify(state, null, 4);
     downloadToFile(save_data, 'jidelnicek.json', 'text/plain');
 });
